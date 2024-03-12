@@ -1,0 +1,25 @@
+{% extends "components/base.html" %}
+
+{% block title %} Verification {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/verified-user.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="h-24 w-24 text-green-500 dark:text-green-400">
+        <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <h1 class="mt-6 text-3xl font-semibold text-gray-700 dark:text-gray-300">Account Successfully Verified!</h1>
+    <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">You can now log in and start using our services.</p>
+    <a style="text-decoration: none;"
+        class="mt-6 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-600 hover:bg-blue-500 focus:shadow-outline focus:outline-none"
+        href="//localhost:3000/auth/login">
+        Log In
+    </a>
+</div>
+
+{% endblock body %}

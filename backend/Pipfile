@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+redis = "*"
+celery = "*"
+fastapi-mail = "*"
+python-jose = "*"
+# pymongo = {extras = ["srv"], version = "==3.11"}
+pymongo = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

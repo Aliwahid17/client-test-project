@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    .code {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi, {{name}}</h1>
+    <p>You're nearly there!</p>
+    <p>To finish setting up your account and start browsing the content on Demo, please verify we've got the correct email.</p>
+    Verification link : <a href="{{link}}" target="_blank">{{link}}</a>
+    <p>If clicking doesn't seem to work, you can copy and paste the link into your browser's address window, or retype it there.</p>
+    <p>If you have any questions or need assistance, please don't hesitate to <a href="mailto:.contact@wahidali.dev">contact us</a>.</p>
+    <p>Best regards,</p>
+    <p>Demo 😄</p>
+  </div>
+</body>
+</html>

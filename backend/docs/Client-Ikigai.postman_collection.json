@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "87226e31-13d3-41dd-9c98-73c19a9877a0",
+		"name": "Client-Ikigai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27288299"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Wahid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aliwahid4792@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2704720498",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{LOCAL}}auth/signup",
+							"host": [
+								"{{LOCAL}}auth"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "aliwahid4792@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{LOCAL}}auth/login",
+							"host": [
+								"{{LOCAL}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Verification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaXdhaGlkNDc5MkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjVmMDQwMjMyODU1ZGJkNmQ0MDdkNGNmIiwic2VjcmV0IjoiYjk0YjJjOWExZDhjNTdmYTE3YTE0MzRhNjBhNTMwNTg3MDVlNmFjYmZkNGUzNWQyNDQ0MWYyNDRlZTU3ZTY4YiIsImV4cCI6MTcxMDI0NTY4Nn0.IxkLfzMnGFqtw495zbOt_j7tYqrxAwn8bFHGxy1Qty0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"aliwahid4792@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}auth/login/verification",
+							"host": [
+								"{{LOCAL}}auth"
+							],
+							"path": [
+								"login",
+								"verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Google Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\" : \"dofrs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}auth/google/signup",
+							"host": [
+								"{{LOCAL}}auth"
+							],
+							"path": [
+								"google",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Google Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\" : \"4/0AeaYSHCH2zdBSI7AmqXCEkBCbDIf9PO78SVm2bHdW5nckqG5BfPgjs2tg7HxG6VT2GxEtA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}auth/google/login",
+							"host": [
+								"{{LOCAL}}auth"
+							],
+							"path": [
+								"google",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaXdhaGlkNDc5MkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoyLCJzZWNyZXQiOiIxZWVhOWFiNGFiYmI2OTg5ZjljMmRhNjMzM2Q1Nzk3MDRjOGExZDEwMTRlZWJhODUzOTU5NTkyODc2OWM1M2RlIiwiZXhwIjoxNzA5OTg2NDc1fQ.xXY-iQO_h4ZF6FnqzFghh0_OjwzJwoeYCww4e6Nwgvk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL",
+			"value": "http://localhost:8000/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "PROD",
+			"value": "http://34.201.76.176/api/v1/",
+			"type": "string"
+		}
+	]
+}
